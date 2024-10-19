@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-color-background text-color-text font-body antialiased">
+    <header>
+   
+        <nav class ="container mx-auto py-2 flex justify-between items-center">
+            <div class="font-bold text-2xl px-9">
+                <a href="#">Early<span class="text-color-accent">Heart</span>Alert</a>
+            </div>
+            <div >
+                <ul class="hidden lg:flex items-center space-x-6 px-16" >
+                
+                    <li> <button class="btn">Follow us</button></li>
+                    <li><a href="#" class="hover:text-green-400 ease-in duration-200"><i class="fa-brands fa-instagram fa-lg"></i></a></li>
+                    <li><a href="#" class="hover:text-green-400 ease-in duration-200"><i class="fa-brands fa-twitter fa-lg"></i></a></li>
+                    <li><a href="#" class="hover:text-green-400 ease-in duration-200"><i class="fa-brands fa-linkedin fa-lg"></i></a></li>
+                    <li><a href="#" class="hover:text-green-400 ease-in duration-200"><i class="fa-brands fa-facebook fa-lg"></i></a></li>
+                </ul>
+            </div>
+            <div id="hamburger" class="lg:hidden cursor-pointer mr-10">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            
+        </nav>
+    </header>
+    <main >
+        <section id="home" >
+            <div class="container ">
+                <div class="flex flex-col items-center z-20 md:flex-row ">
+                    <div class="text-left mb-12 md:w-2/3 md:pr-10">
+                        <h1 class="font-bold text-4xl mx-14 leading-snug mb-4 sm:text-center lg:text-left">Connect with your <span class="text-color-accent">Heart</span></h1>
+                        <p class="leading-relaxed mx-14">Taking care of your heartis about more than just physical health.
+                            Its about connecting with your emotions, reducing stress, and finding balance in your life.
+                              Take time to connect with your heart and improve your overall well-being.</p>
+                              <button class=" btn mx-14 ">Contact us</button>
+
+                    </div>
+                    <div>
+                        <img src="/images/illus1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class = "flex w-full min-h-full justify-center items-center text-white">
+            <div class="flex flex-col space-y-6 md:flex-row  bg-color-accent w-full max-w-7xl  p-8 rounded-xl shadow-xl">
+                <div class="felx flex-col justify-between  w-1/2">
+                    <div>
+                        <h1 class="title">Early Heart Alert</h1>
+                        <p class=" mt-3 text-color-accent-100">Please fill the form to continue</p>
+                    </div>
+                    <div>
+                        <form action="/submit" method="post" class="flex-row mt-5"  >
+                        
+                            <h1 class="mb-3 font-bold">Name</h1>
+                            <input type="text" id="name" name="name" required class="px-25 py-2 w-2/3 mb-5 rounded-lg "><br>
+                    
+                           <h1 class="mb-3 font-bold">Age</h1>
+                            <input type="number" id="age" name="age" min="1" max="120" class="px-25 py-2 w-2/3 mb-5 rounded-lg " required><br>
+                    
+                            <h1 class="mb-3 font-bold">City</h1>
+                            <input type="text" id="city" name="city" class="px-25 py-2 w-2/3 mb-5 rounded-lg" required><br>
+                    
+                            <h1 class="mb-3 font-bold">Postal code</h1>
+                            <input type="text" id="pincode" name="pincode" pattern="[0-9]{6}" class="px-25 py-2 rounded-lg w-2/3" maxlength="6" required>               
+                            
+                            <div class="mt-10">
+                                <input type="submit" value="Submit" class="btn w-2/3">
+    
+                            </div>
+                                                   
+                        </form>
+                    </div>                  
+                </div>
+                <div >
+                    <img src="/images/illus2md.png" alt="">
+                </div>
+            </div>
+        </div>
+        <section id="report">
+            <div class=" mx-10 mt-20 flex">
+                <div class="w-1/2  flex flex-col items-center">
+                    <h1 class="title text-left">Select your <span class="text-color-accent">Symptoms</span></h1>
+                    <h1 class="titlesm mt-5 mb-10">Symptoms</h1>
+                        <form action="/submit" method="post" id="symptomForm">
+                            <div class="flex flex-col space-y-5">
+                                <div class="space-x-5">
+                                    <label for="symptom1">Select a symptom:</label>
+                                    <select id="symptom1" name="symptom1"></select>
+                                </div>
+                                <div class="space-x-5">
+                                    <label for="symptom2">Select a symptom:</label>
+                                    <select id="symptom2" name="symptom2"></select>
+                                </div>
+                                <div class="space-x-5">
+                                    <label for="symptom3">Select a symptom:</label>
+                                    <select id="symptom3" name="symptom3"></select>
+                                </div>
+                            </div>
+                            <div class="mt-10">
+                                <button class="btn"><input type="submit" value="Submit"></button>
+                            </div>                   
+                        </form>
+                </div>
+            
+                <div class="w-1/2 flex flex-col items-center" id="reportGen">
+                    <h1 class="title ">Know your <span class="text-color-accent">Situation</span></h1>
+                    <h1 class="titlesm mt-5">
+                        Press submit to generate your report
+                    </h1>
+                </div>
+           </div>           
+        </section>
+
+        <section id="docs" class="mx-10 mt-20 mb-40">
+            <div class="flex flex-col">
+                <h1 class="title mb-20">Know your nearby <span class="text-color-accent">Cardiologists</span></h1>
+                <div class="flex flex-row">
+                    <div class="flex flex-col w-1/2 justify-center items-center">
+                        <h1 class="font-bold">Cardiologist name:   Dr. Aroop Mukherjee </h1>
+                        <h1 class="mt-10 font-bold">Hospital:    Max Multi Speciality Centre</h1>
+                        <buttonn mt-10 class="btn">Book Appointment</button>
+                    </div>
+                    <div class="h-44" >
+                        <img src="/images/docs/doc1.avif" class="h-44" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        
+        <section id="end " class="mt-10">
+            <div class="mt-10 mb-10 mx-10">
+                <h1 class="text-3xl font-bold text-center"><span class="text-color-accent">Engage</span> with us!</h1>
+                <div class="flex flex-row justify-center items-center">
+                    
+                    <ul class="hidden lg:flex items-center space-x-14 px-16 mt-10 mb-20" >
+                    
+                       
+                        <li><a href="#" class="hover:text-green-400 ease-in duration-200"><i class="fa-brands fa-instagram fa-2xl"></i></a></li>
+                        <li><a href="#" class="hover:text-green-400 ease-in duration-200"><i class="fa-brands fa-twitter  fa-2xl"></i></a></li>
+                        <li><a href="#" class="hover:text-green-400 ease-in duration-200"><i class="fa-brands fa-linkedin  fa-2xl"></i></a></li>
+                        <li><a href="#" class="hover:text-green-400 ease-in duration-200"><i class="fa-brands fa-facebook  fa-2xl"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mx-10">
+                <h1 class="text-3xl font-bold mb-5">Contact <span class="text-color-accent">us</span></h1>
+            <h1 class="mb-10 font-bold">Phone: </h1> 
+            </div>
+            
+            <a href="#" class="mx-10 font-bold">Learn More</a>
+            <div class="w-full bg-gray-300 h-px mt-10"></div>
+            <h1 class="mx-10" class="text-3xl font-bold">Privacy Statements</h1>
+            <h1 class="mx-10 mb-10">Disclaimer</h1>
+        </section>
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+           
+            const symptoms = [
+                "Chest discomfort",
+                "Irregular heartbeat",
+                "Shortness of breath",
+                "Dizziness",
+                "Nausea",
+                "Fatigue",
+                "Swelling in legs, ankles, or feet",
+                "High blood pressure",
+                "Palpitations",
+                "Fainting"
+            ];  
+
+            const heartConditions = [
+                { name: "Coronary artery disease", description: "A condition caused by plaque buildup in the coronary arteries, leading to reduced blood flow to the heart muscle." },
+                { name: "Heart attack (Myocardial infarction)", description: "A sudden blockage of blood flow to part of the heart muscle, often due to a blood clot in a coronary artery." },
+                { name: "Arrhythmia", description: "Abnormal heart rhythm, which can cause the heart to beat too fast, too slow, or irregularly." },
+                { name: "Heart failure", description: "The heart's inability to pump enough blood to meet the body's needs, often due to weakened heart muscles or other heart conditions." },
+                { name: "Heart valve disease", description: "A condition where one or more of the heart's valves don't work properly, affecting blood flow through the heart." },
+                { name: "Pericarditis", description: "Inflammation of the pericardium (the sac around the heart), causing chest pain and other symptoms." },
+                { name: "Myocarditis", description: "Inflammation of the heart muscle, often caused by viral infections or other diseases." },
+                { name: "Atrial fibrillation", description: "An irregular and often rapid heart rate that can increase the risk of stroke, heart failure, and other heart-related complications." },
+                { name: "Angina", description: "Chest pain or discomfort caused by reduced blood flow to the heart muscle, often a symptom of coronary artery disease." },
+                { name: "Cardiomyopathy", description: "Disease of the heart muscle, leading to weakened heart function and potential heart failure." }
+            ];
+
+            for( let i=1;i<=3;i++){
+                const selectElement = document.getElementById("symptom"+i);   
+           
+                symptoms.forEach(symptom => {
+                    const option = document.createElement("option");
+                    option.value = symptom.toLowerCase().replace(/ /g, "_");
+                    option.textContent = symptom;
+                    selectElement.appendChild(option);
+                });
+            }
+            const form = document.getElementById("symptomForm");
+            form.addEventListener("submit", function(event) {
+                event.preventDefault();
+                
+                
+                const symptom1Value = document.getElementById("symptom1").value;
+                const symptom2Value = document.getElementById("symptom2").value;
+                const symptom3Value = document.getElementById("symptom3").value;
+                const randomCondition = heartConditions[Math.floor(Math.random() * heartConditions.length)];
+                
+                const reportContainer = document.getElementById("reportGen");
+                reportContainer.innerHTML = `
+                <div>
+                    <h1 class="title text-center">Know your <span class="text-color-accent">Situation</span></h1>
+                    <h2 class="titlesm mt-5 mb-10">Symptom Report</h2>
+                    <p><span class="font-bold">Symptom 1</span>: ${symptom1Value}</p>
+                    <p><span class="font-bold">Symptom 2</span>: ${symptom2Value}</p>
+                    <p><span class="font-bold">Symptom 3</span>: ${symptom3Value}</p>
+                    <p class="font-bold mt-10">Possible Heart Condition: ${randomCondition.name}</p>
+                    <p class="font-bold mt-5">Description: ${randomCondition.description}</p>
+                    
+                    </div>
+                `;
+            });         
+           
+        });
+    </script>
+</body>
+</html>
